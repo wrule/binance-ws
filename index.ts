@@ -4,7 +4,7 @@ const client = new Spot('', '', { });
 
 function log(data: any) {
   try {
-    console.log(Object.values(data));
+    console.log(Object.values(JSON.parse(data)));
   } catch (e) {
     console.log(data);
     console.log(e);

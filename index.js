@@ -4,7 +4,7 @@ const connector_1 = require("@binance/connector");
 const client = new connector_1.Spot('', '', {});
 function log(data) {
     try {
-        console.log(Object.values(data));
+        console.log(Object.values(JSON.parse(data)));
     }
     catch (e) {
         console.log(data);

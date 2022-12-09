@@ -1,4 +1,4 @@
-const { Spot } = require('@binance/connector')
+import { Spot } from '@binance/connector';
 
 const client = new Spot('', '', {
   wsURL: 'wss://testnet.binance.vision' // If optional base URL is not provided, wsURL defaults to wss://stream.binance.com:9443
@@ -7,7 +7,7 @@ const client = new Spot('', '', {
 const callbacks = {
   open: () => client.logger.log('open'),
   close: () => client.logger.log('closed'),
-  message: data => client.logger.log(data)
+  message: (data: any) => client.logger.log(data)
 }
 const aggTrade = client.aggTradeWS('bnbusdt', callbacks)
 

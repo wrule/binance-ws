@@ -2,7 +2,7 @@ import { Spot } from '@binance/connector';
 
 const client = new Spot('', '', {
 //   wsURL: 'wss://testnet.binance.vision' // If optional base URL is not provided, wsURL defaults to wss://stream.binance.com:9443
-})
+});
 
 const callbacks = {
   open: () => client.logger.log('open'),

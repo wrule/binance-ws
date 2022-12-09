@@ -9,7 +9,7 @@ const callbacks = {
   close: () => client.logger.log('closed'),
   message: (data: any) => client.logger.log(data)
 }
-const aggTrade = client.combinedStreams(['ethusdt@bookTickerWS'], callbacks);
+const aggTrade = client.combinedStreams(['ethusdt@bookTicker'], callbacks);
 
 // unsubscribe the stream above
 // setTimeout(() => client.unsubscribe(aggTrade), 3000)

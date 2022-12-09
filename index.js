@@ -4,7 +4,9 @@ const connector_1 = require("@binance/connector");
 const client = new connector_1.Spot('', '', {});
 function log(data) {
     try {
-        console.log(Object.values(JSON.parse(data).data));
+        const list = Object.values(JSON.parse(data).data);
+        list.unshift(Number(new Date()));
+        console.log(list);
     }
     catch (e) {
         console.log(data);

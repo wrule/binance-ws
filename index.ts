@@ -4,7 +4,9 @@ const client = new Spot('', '', { });
 
 function log(data: any) {
   try {
-    console.log(Object.values(JSON.parse(data).data));
+    const list = Object.values(JSON.parse(data).data);
+    list.unshift(Number(new Date()));
+    console.log(list);
   } catch (e) {
     console.log(data);
     console.log(e);

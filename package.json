@@ -11,6 +11,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@binance/connector": "^2.0.0-rc.4"
+    "@binance/connector": "^2.0.0-rc.4",
+    "@types/node": "^18.11.12"
   }
 }

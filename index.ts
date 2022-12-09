@@ -2,10 +2,19 @@ import { Spot } from '@binance/connector';
 
 const client = new Spot('', '', { });
 
+function log(data: any) {
+  try {
+    console.log(Object.values(data));
+  } catch (e) {
+    console.log(data);
+    console.log(e);
+  }
+}
+
 const callbacks = {
   open: () => console.log('开始'),
   close: () => console.log('结束'),
-  message: (data: any) => console.log(data),
+  message: (data: any) => log(data),
 }
 client.combinedStreams(['ethusdt@bookTicker'], callbacks);
 

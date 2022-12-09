@@ -16,7 +16,14 @@ const callbacks = {
   close: () => console.log('结束'),
   message: (data: any) => log(data),
 }
-client.combinedStreams(['ethusdt@bookTicker'], callbacks);
+client.combinedStreams([
+  'ethusdt@bookTicker',
+  'btcusdt@bookTicker',
+  'opusdt@bookTicker',
+  'opeth@bookTicker',
+  'dogeusdt@bookTicker',
+  'dogebtc@bookTicker',
+], callbacks);
 
 // unsubscribe the stream above
 // setTimeout(() => client.unsubscribe(aggTrade), 3000)

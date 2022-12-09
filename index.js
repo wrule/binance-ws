@@ -3,10 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const connector_1 = require("@binance/connector");
 const client = new connector_1.Spot('', '', {});
 function log(data) {
-    console.log(data);
-    return;
     try {
-        console.log(Object.values(JSON.parse(data)));
+        console.log(Object.values(JSON.parse(data).data));
     }
     catch (e) {
         console.log(data);

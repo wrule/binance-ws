@@ -6,7 +6,7 @@ function log(data: any) {
   try {
     const list = Object.values(JSON.parse(data).data);
     list.unshift(Number(new Date()));
-    console.log(list);
+    console.log(JSON.stringify(list) + ',');
   } catch (e) {
     console.log(data);
     console.log(e);

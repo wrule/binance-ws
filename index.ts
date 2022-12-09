@@ -3,6 +3,8 @@ import { Spot } from '@binance/connector';
 const client = new Spot('', '', { });
 
 function log(data: any) {
+  console.log(data);
+  return;
   try {
     console.log(Object.values(JSON.parse(data)));
   } catch (e) {

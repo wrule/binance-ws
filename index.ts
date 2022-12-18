@@ -30,6 +30,7 @@ client.combinedStreams([
   'arusdt@trade',
   'dogeusdt@trade',
   'shibusdt@trade',
+  'sandusdt@trade',
 ], callbacks);
 
 // unsubscribe the stream above

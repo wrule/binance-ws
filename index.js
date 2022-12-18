@@ -19,17 +19,17 @@ const callbacks = {
     message: (data) => log(data),
 };
 client.combinedStreams([
-    'ethusdt@trade',
-    'btcusdt@trade',
-    'opusdt@trade',
-    'linkusdt@trade',
-    'aptusdt@trade',
-    'ensusdt@trade',
-    'dentusdt@trade',
-    'apeusdt@trade',
-    'arusdt@trade',
-    'dogeusdt@trade',
-    'shibusdt@trade',
+    'ethusdt@aggTrade',
+    'btcusdt@aggTrade',
+    'opusdt@aggTrade',
+    'linkusdt@aggTrade',
+    'aptusdt@aggTrade',
+    'ensusdt@aggTrade',
+    'dentusdt@aggTrade',
+    'apeusdt@aggTrade',
+    'arusdt@aggTrade',
+    'dogeusdt@aggTrade',
+    'shibusdt@aggTrade',
 ], callbacks);
 // unsubscribe the stream above
 // setTimeout(() => client.unsubscribe(aggTrade), 3000)
